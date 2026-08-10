@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karan | Web Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0b0b0f;
+            border-bottom: 1px solid #222;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #7c5cff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #7c5cff;
+        }
+
+        /* GENERAL */
+        section {
+            padding: 80px 8%;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #7c5cff;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 19px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #7c5cff;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #555;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* ABOUT */
+        .about p {
+            color: #aaa;
+            max-width: 750px;
+            font-size: 18px;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #15151c;
+            border: 1px solid #292934;
+            padding: 12px 20px;
+            border-radius: 8px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background: #15151c;
+            border: 1px solid #292934;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .project a {
+            color: #9a85ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            background: #15151c;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #292934;
+        }
+
+        .service p {
+            color: #aaa;
+            margin-top: 8px;
+        }
+
+        /* CONTACT */
+        .contact p {
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+
+        .contact a {
+            color: #9a85ff;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #222;
+            color: #777;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Karan<span>.</span></div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <h1>
+                Hi, I'm <span>Karan</span>.<br>
+                I build modern websites.
+            </h1>
+
+            <p>
+                I'm a beginner web developer learning to create
+                clean, responsive and modern websites for businesses
+                and personal brands.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container about">
+
+            <h2>About Me</h2>
+
+            <p>
+            
+    I'm Karan, a web developer focused on creating modern,
+    responsive and user-friendly websites for businesses,
+    brands and individuals. I build clean websites that
+    look professional on both mobile and desktop devices.
+    My goal is to help businesses build a strong online
+    presence with websites that are simple, fast and easy
+    to use.
+</p>
+                
+                
+    
+            
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section>
+        <div class="container">
+
+            <h2>My Skills</h2>
+
+            <div class="skills">
+
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Responsive Design</div>
+                <div class="skill">Git & GitHub</div>
+                <div class="skill">AI Tools</div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+
+            <h2>My Projects</h2>
+
+            <div class="projects">
+
+                <!-- PROJECT 1 -->
+                <div class="project">
+                    <h3>🍔 Restaurant Website</h3>
+
+                    <p>
+                        A modern responsive restaurant website
+                        with menu, contact information and
+                        location section.
+                    </p>
+
+                    <!-- Replace # with your real website link -->
+                    <a href="#" target="_blank">
+                        View Website →
+                    </a>
+                </div>
+
+
+                <!-- PROJECT 2 -->
+                <div class="project">
+                    <h3>💪 Gym Website</h3>
+
+                    <p>
+                        A modern gym website with membership
+                        plans, trainers and contact sections.
+                    </p>
+
+                    <!-- Replace # with your real website link -->
+                    <a href="https://xyz115.github.io/TITAN-FITNESS/"
+                     "target="blank">
+                
+                      View Website →
+                    </a>
+                </div>
+
+
+                <!-- PROJECT 3 -->
+                <div class="project">
+                    <h3>🏪 Business Website</h3>
+
+                    <p>
+                        A clean business website designed for
+                        a local business.
+                    </p>
+
+                    <!-- Replace # with your real website link -->
+                    <a href="#" target="_blank">
+                        View Website →
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+
+            <h2>What I Can Do</h2>
+
+            <div class="services">
+
+                <div class="service">
+                    <h3>Business Websites</h3>
+                    <p>
+                        Modern websites for small and local businesses.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <h3>Landing Pages</h3>
+                    <p>
+                        Clean landing pages for products and services.
+                    </p>
+                </div>
+
+                <div class="service">
+    <h3>Restaurant Websites</h3>
+
+    <p>
+        Menu, location, contact and WhatsApp sections.
+    </p>
+
+    <a href="https://dilip-samosa-shop.preview.emergentagent.com/" target="_blank">
+        View Website →
+    </a>
+</div>
+                    
+                    <p>
+                        Menu, location, contact and WhatsApp sections.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <h3>Website Redesign</h3>
+                    <p>
+                        Modernizing old or outdated websites.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container contact">
+
+            <h2>Let's Work Together</h2>
+
+            <p>
+                Have a project or business that needs a website?
+            </p>
+
+            <p>
+                Email:
+                <a href="karangupta10110@gmail.com">
+                    karangupta10110@gmail.com
+                </a>
+            </p>
+
+            <p>
+                WhatsApp:
+                <a href="https://wa.me/9131233922">
+                    Contact Me 
+                </a>
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Karan. All rights reserved.
+    </footer>
+
+</body>
+</html>
